@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+:root {
+  --cream: #F5EFE0;
+  --burgundy: #6B1D3A;
+  --rose: #D4A5B0;
+  --ink: #1A1A1A;
+  --gold: #C9A84C;
+}
+
+@theme {
+  --color-cream: var(--cream);
+  --color-burgundy: var(--burgundy);
+  --color-rose: var(--rose);
+  --color-ink: var(--ink);
+  --color-gold: var(--gold);
+
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-body);
+  min-height: 100vh;
+}
+
+/* Custom typewriter inputs and retro border styles */
+.input-retro {
+  background-color: #FAF6EB !important;
+  color: var(--ink) !important;
+  border: 2px solid var(--ink) !important;
+  border-radius: 4px !important;
+  font-family: var(--font-body);
+  transition: all 0.2s ease;
+  padding: 0.75rem 1rem;
+}
+
+.input-retro:focus {
+  outline: none !important;
+  box-shadow: 4px 4px 0px var(--burgundy) !important;
+  transform: translate(-2px, -2px);
+}
+
+/* Retro buttons */
+.btn-retro {
+  background-color: var(--burgundy);
+  color: var(--cream);
+  border: 2px solid var(--ink);
+  padding: 0.65rem 1.25rem;
+  border-radius: 4px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  box-shadow: 3px 3px 0px var(--ink);
+  transition: all 0.1s ease;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-retro:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px var(--ink);
+  background-color: #5c1831;
+}
+
+.btn-retro:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px var(--ink);
+}
+
+.btn-retro-secondary {
+  background-color: var(--rose);
+  color: var(--ink);
+  border: 2px solid var(--ink);
+  padding: 0.65rem 1.25rem;
+  border-radius: 4px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  box-shadow: 3px 3px 0px var(--ink);
+  transition: all 0.1s ease;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-retro-secondary:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px var(--ink);
+  background-color: #c9939e;
+}
+
+.btn-retro-secondary:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px var(--ink);
+}
+
+/* Badge retro */
+.badge-retro {
+  background-color: var(--rose);
+  color: var(--ink);
+  border: 2px solid var(--ink);
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 4px;
+  box-shadow: 2px 2px 0px var(--ink);
+  display: inline-flex;
+}
+
+/* Vintage card style */
+.card-retro {
+  background-color: #FAF6EB;
+  border: 2px solid var(--ink);
+  border-radius: 6px;
+  box-shadow: 4px 4px 0px var(--ink);
+  transition: all 0.2s ease;
+}
+
+.card-retro:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px var(--ink);
+}
+
