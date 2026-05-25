@@ -172,7 +172,7 @@ export async function GET(req: Request) {
       .from('posts')
       .select(isAnonymousOnly ? anonymousSelect : standardSelect)
       .eq('is_published', isPublished)
-      .order('created_at', { ascending: false })
+      .order('created_at', { ascending: false }) as any
 
     if (isAnonymousOnly) {
       query = query.eq('is_anonymous', true)
@@ -193,7 +193,7 @@ export async function GET(req: Request) {
     }
 
     // FAANG Privacy Layer: Clean up author_id and profiles if is_anonymous is true
-    const sanitizedPosts = posts.map((post) => sanitizeAnonymousPost(post))
+    const sanitizedPosts = (posts || []).map((post: any) => sanitizeAnonymousPost(post))
 
     return NextResponse.json(sanitizedPosts)
   } catch (err: unknown) {
